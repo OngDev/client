@@ -1,5 +1,5 @@
 <template>
-  <div id="livechat-container">
+  <div class="livechat-container">
     <p v-if="error && error !== ''" id="error-message"></p>
     <div
       v-for="message in messages"
@@ -15,7 +15,7 @@
         <p class="message-text">{{ message.text }}</p>
       </div>
       <button class="button-archive" @click="archiveMessage(message.id)">
-        <img src="~/assets/img/icon_archive.svg" alt="" />
+        <img src="~/assets/img/icon_archive.svg" alt=""/>
       </button>
     </div>
   </div>
@@ -2560,33 +2560,27 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 :root {
-  --font-root: 'Roboto', sans-serif;
-  --background: hsl(0, 0%, 7%);
-  --background-header: hsl(0, 0%, 13%);
-  --background-message: hsl(210, 8%, 20%);
-  --author-name-color: hsl(36, 100%, 93%);
-  --message-text-color: hsla(0, 0%, 100%, 0.9);
+  --font-root: 'Montserrat', sans-serif;
+  --background: #111111;
+  --background-header: #2c2c2c;
+  --background-message: #2c2c2c;
+  --author-name-color: #FFF1DC;
+  --message-text-color: rgba(255, 255, 255, 0.9);;
 }
 
-*,
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
-
-html {
+.livechat-container {
   font-family: var(--font-root);
-  font-size: 0.75rem;
-  background-color: var(--background);
-}
-
-#livechat-container {
-  width: 650px;
-  max-height: 850px;
+  width: 376px;
+  max-height: 765px;
+  font-size: 11px;
   overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--background);
+  margin: 15px;
 }
 
 .message-container {
@@ -2611,7 +2605,7 @@ html {
 }
 
 .message-container:hover {
-  transform: scale(1.075);
+  transform: scale(1.05);
   transition: all 0.5s;
 }
 
@@ -2628,6 +2622,7 @@ html {
 
 .message-text {
   color: var(--message-text-color);
+  width: 220px;
   word-break: break-word;
 }
 
