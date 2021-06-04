@@ -1,5 +1,5 @@
 <template>
-  <div id="live-container">
+  <div class="live-container">
     <ChannelStats />
     <LiveChat />
   </div>
@@ -15,9 +15,9 @@ export default {
 </script>
 
 <style scoped>
-#live-container {
+.live-container {
   width: 1920px;
   height: 1080px;
-  background-color: #f2f2f2;
+  background-color: #000000;
 }
 </style>
