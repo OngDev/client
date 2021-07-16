@@ -121,7 +121,32 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('static/fonts/montserrat-v15-latin-300.woff2') format('woff2'),
+       url('static/fonts/montserrat-v15-latin-300.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('static/fonts/montserrat-v15-latin-regular.woff2') format('woff2'),
+       url('static/fonts/montserrat-v15-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('static/fonts/montserrat-v15-latin-700.woff2') format('woff2'),
+       url('static/fonts/montserrat-v15-latin-700.woff') format('woff');
+}
 
 :root {
   --font-root: 'Montserrat', sans-serif;
@@ -134,11 +159,7 @@ export default {
 
 .livechat-container {
   font-family: var(--font-root);
-  width: 376px;
-  max-height: 765px;
   font-size: 11px;
-  overflow-y: auto;
-  overflow-x: hidden;
   background-color: var(--background);
   margin: 15px;
 }
